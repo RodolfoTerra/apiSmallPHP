@@ -1,0 +1,17 @@
+{
+    "name": "root/api-small-php",
+    "description": "CRUD PHP MySQL",
+    "require": {
+        "psr/log": "^1.0"
+    },
+    "require-dev": {
+        "psr/log": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Rodolfo Terra",
+            "email": "rodolfodesignpro@yahoo.com.br"
+        }
+    ],
+    "minimum-stability": "stable"
+}

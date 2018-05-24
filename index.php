@@ -1,15 +1,11 @@
 <?php
 
-	ini_set('display_errors',1);
-
 	require_once 'vendor/autoload.php';
 
-	//require 'app/config/constants.php';
-
+	use \App\Config\Configs as Configs;
 	use \App\Config\Constants as Constants;
-
+	
+	$Config = new Configs;
 	$costants = new Constants;
 
-	
 	echo WWW_ROOT.'<br>';
-	//echo $defaul;

@@ -1,5 +1,7 @@
 <?php
 
+	//require_once 'app/config/doctrine/doctrine_config.php';
+
 	require_once 'vendor/autoload.php';
 
 	use \App\Config\Configs as Configs;
@@ -21,6 +23,15 @@
 	}
 	/* End Router verification */
 
+
+	/* Dinamic Model */
+	$modelVariable = '\App\\Model\\'.$routerName;
+
+	if(class_exists($modelVariable)) {
+		$model = new $modelVariable;
+	}
+
+
 	/* Dinamic Control */
 	$controlVariable = '\App\\Control\\'.$routerName;
 
@@ -29,4 +40,18 @@
 	}
 
 
-	print_r($routerName);
+	/* Dinamic View */
+	$viewVariable = '\App\\View\\'.$routerName;
+
+	if(class_exists($viewVariable)) {
+		$view = new $viewVariable;
+	}
+
+	// $testeNome = 'Nome 1';
+	// echo $model->setTesteNome($testeNome);
+
+	// $entityManager->persist($model);
+	// $entityManager->flush();
+
+	//echo $model->getTesteNome();
+	//print_r($teste->getTesteNome());

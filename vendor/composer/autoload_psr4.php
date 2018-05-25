@@ -17,6 +17,8 @@ return array(
     'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations'),
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common'),
+    'App\\View\\' => array($baseDir . '/app/view'),
+    'App\\Model\\' => array($baseDir . '/app/model'),
     'App\\Lib\\Functions\\' => array($baseDir . '/app/lib/functions'),
     'App\\Control\\' => array($baseDir . '/app/control'),
     'App\\Config\\' => array($baseDir . '/app/config'),

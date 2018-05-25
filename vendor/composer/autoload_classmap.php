@@ -8,6 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Config\\Configs' => $baseDir . '/app/config/config.php',
     'App\\Config\\Constants' => $baseDir . '/app/config/constants.php',
+    'App\\Config\\Router' => $baseDir . '/app/config/router.php',
+    'App\\Control\\Teste' => $baseDir . '/app/control/teste.php',
+    'App\\Lib\\Functions\\Native' => $baseDir . '/app/lib/functions/native.php',
+    'App\\Model\\Teste' => $baseDir . '/app/model/teste.php',
     'Doctrine\\Common\\Annotations\\Annotation' => $vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php',
     'Doctrine\\Common\\Annotations\\AnnotationException' => $vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php',
     'Doctrine\\Common\\Annotations\\AnnotationReader' => $vendorDir . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php',

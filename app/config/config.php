@@ -4,6 +4,7 @@
 
 	/**
 	 * Config Sistem
+	 *
 	 */
 
 	class Configs

@@ -4,24 +4,23 @@
 
 	/**
 	 * @Entity
-	 * @Table(name="teste_one")
+	 * @Table(name="teste")
 	 */
 
 	class Teste
 	{
+		
 		/**
 		*	@var integer @id
 		*		@Column(name="id", type="integer")
 		*		@GenerateValue(strategy="AUTO")
 		*/
-
 		private $id;
 
 		/**
 		*
 		*	@var string @Column(type="string", length=255)
 		*/
-		
 		private $nome;
 
 		function __construct ($id=0, $nome="")

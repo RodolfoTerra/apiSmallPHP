@@ -3,7 +3,7 @@
 
 use Doctrine\ORM\Tools\Console\ConsoleRunner;
 
-require_once "app/config/doctrine/doctrine_boot.php";
+require_once "app/config/doctrine/doctrine_config.php";
 
 return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);
 

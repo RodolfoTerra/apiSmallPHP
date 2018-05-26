@@ -7,28 +7,14 @@
 	 * @Table(name="teste")
 	 */
 
-	use Doctrine\ORM\EntityRepository;
-	use Doctrine\ORM\Mapping as ORM;
 	use \App\Model\Base as ConnectBase;
 
-	/**
-	 * @ORM\Entity @ORM\Table(name="teste")
-	 **/
 
 	class Teste
 	{
 
-		/**
-		*	@var integer @id
-		*		@Column(name="id", type="integer")
-		*		@GenerateValue(strategy="AUTO")
-		*/
-		private $testeId;
 
-		/**
-		*
-		*	@var string @Column(name="nome", type="string", length=255)
-		*/
+		private $testeId;
 		private $testeNome;
 
 

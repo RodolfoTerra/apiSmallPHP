@@ -31,20 +31,6 @@ class ComposerAutoloaderInitd3a64591d198033c699a5deb24d6ffa9
         $loader->setClassMapAuthoritative(true);
         $loader->register(true);
 
-        $includeFiles = require __DIR__ . '/autoload_files.php';
-        foreach ($includeFiles as $fileIdentifier => $file) {
-            composerRequired3a64591d198033c699a5deb24d6ffa9($fileIdentifier, $file);
-        }
-
         return $loader;
-    }
-}
-
-function composerRequired3a64591d198033c699a5deb24d6ffa9($fileIdentifier, $file)
-{
-    if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
-        require $file;
-
-        $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
     }
 }

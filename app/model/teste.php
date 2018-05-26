@@ -7,6 +7,13 @@
 	 * @Table(name="teste")
 	 */
 
+	use Doctrine\ORM\EntityRepository;
+	use Doctrine\ORM\Mapping as ORM;
+	use \App\Model\Base as ConnectBase;
+
+	/**
+	 * @ORM\Entity @ORM\Table(name="teste")
+	 **/
 
 	class Teste
 	{
@@ -30,24 +37,31 @@
 
 			$this->testeId = $testeId;
 			$this->testeNome = $testeNome;
-			echo ' model-teste';
 		}
 
 
-		public function getTesteId(): integer
+	    public function getTesteId()
+	    {
+	        return $this->testeId;
+	    }
+
+
+	    public function getTesteNome()
+	    {
+	        return $this->testeNome;
+	    }
+
+
+	    public function setTesteNome($testeNome)
+	    {
+	        $this->testeNome = $testeNome;
+	    }
+
+
+		public function setTeste($query)
 		{
-			return $this->testeId;
-		}
+			$bd = new ConnectBase;
 
-
-		public function getTesteNome(): string
-		{
-			return $this->testeNome;
-		}
-
-
-		public function setTesteNome(string $testeNome): void
-		{
-			$this->testeNome = $testeNome;
+			return $bd->persistModel($query);
 		}
 	}

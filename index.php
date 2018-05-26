@@ -1,19 +1,19 @@
 <?php
 
-	//require_once 'app/config/doctrine/doctrine_config.php';
-
 	require_once 'vendor/autoload.php';
 
 	use \App\Config\Configs as Configs;
 	use \App\Config\Constants as Constants;
 	use \App\Config\Router as Router;
+	use \App\Model\Base as ConnectBase;
 
 	$config = new Configs;
 	$costants = new Constants;
 	$router = new Router;
+	$bd = new ConnectBase;
 
 	/* Start Router verification */
-	$arrayRouter = $router->getRouter();
+	$arrayRouter = $router::getRouter();
 	$routerName = $arrayRouter[0];
 
 	if(isset($arrayRouter[1])) { 
@@ -29,6 +29,7 @@
 
 	if(class_exists($modelVariable)) {
 		$model = new $modelVariable;
+		//$model = $routerName;
 	}
 
 
@@ -38,7 +39,7 @@
 	if(class_exists($controlVariable)) {
 		$control = new $controlVariable;
 	}
-
+	
 
 	/* Dinamic View */
 	$viewVariable = '\App\\View\\'.$routerName;
@@ -47,11 +48,9 @@
 		$view = new $viewVariable;
 	}
 
-	// $testeNome = 'Nome 1';
-	// echo $model->setTesteNome($testeNome);
 
-	// $entityManager->persist($model);
-	// $entityManager->flush();
+	//$model->setTeste('INSERT INTO teste (nome) VALUES ("Russo4")');
 
-	//echo $model->getTesteNome();
-	//print_r($teste->getTesteNome());
+	//print_r($model);
+
+	//echo $routerName;

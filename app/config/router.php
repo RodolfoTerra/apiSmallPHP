@@ -38,7 +38,7 @@
 			$urlRequisition  = $urlExplode[$urlExplodeCont];
 
 			$functionsNative = new FunctionsNative;
-			$urlExtension 	 = $functionsNative->upperString($urlRequisition, 1);
+			$urlExtension 	 = $functionsNative::upperString($urlRequisition, 1);
 
 			$urlRequest 	 = explode('?', $urlExtension);
 

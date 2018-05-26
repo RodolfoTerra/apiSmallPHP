@@ -5,9 +5,7 @@
         "psr/log": "^1.0"
     },
     "require-dev": {
-        "psr/log": "^1.0",
-        "doctrine/orm": "*",
-        "symfony/yaml": "*"
+        "psr/log": "^1.0"
     },
     "authors": [
         {

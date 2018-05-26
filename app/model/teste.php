@@ -7,12 +7,11 @@
 	 * @Table(name="teste")
 	 */
 
-	use \App\Model\Base as ConnectBase;
+	use App\Model\Base as ConnectBase;
 
 
 	class Teste
 	{
-
 
 		private $testeId;
 		private $testeNome;
@@ -26,21 +25,11 @@
 		}
 
 
-	    public function getTesteId()
+	    public function getTeste($query)
 	    {
-	        return $this->testeId;
-	    }
+	    	$bd = new ConnectBase;
 
-
-	    public function getTesteNome()
-	    {
-	        return $this->testeNome;
-	    }
-
-
-	    public function setTesteNome($testeNome)
-	    {
-	        $this->testeNome = $testeNome;
+	        return $bd->getBase($query);
 	    }
 
 
@@ -48,6 +37,6 @@
 		{
 			$bd = new ConnectBase;
 
-			return $bd->persistModel($query);
+			return $bd->setBase($query);
 		}
 	}
